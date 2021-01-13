@@ -31,9 +31,12 @@ for (let hour = 9; hour <= 20; hour++) {
 
     let colmd2Div = $('<div>');
     colmd2Div.addClass('col-md-2');
+    colmd2Div.addClass("col-xs-1");
+    colmd2Div.addClass("hour");
 
     const timeBoxSpn = $('<span>');
     timeBoxSpn.attr('class','timeBox');
+    
 
     let displayHour = 12;
     let ampm = "";
@@ -70,6 +73,8 @@ for (let hour = 9; hour <= 20; hour++) {
 
     let colmd1Div = $("<div>");
     colmd1Div.addClass("col-md-1");
+    colmd1Div.addClass("col-xs-1");
+    colmd1Div.css("background-color", "#1b1b1b")
 
     let saveBtn = $('<button>');
     saveBtn.attr('id',`saveid-${index}`);
@@ -96,9 +101,9 @@ function changeRowColor (hourRow,hour) {
       
       hourRow.addClass("past")
     } else if ( hour > hr24) {
-      hourRow.addClass("present")
-    } else {
       hourRow.addClass("future")
+    } else {
+      hourRow.addClass("present")
     }
   };
 
@@ -118,4 +123,12 @@ function changeRowColor (hourRow,hour) {
     
   
      }
+
+     let clearButton = $("#clear-button")
+     clearButton.on("click", function(){
+       console.log("working");
+       localStorage.clear();
+       location.reload();
+     })
+
 })

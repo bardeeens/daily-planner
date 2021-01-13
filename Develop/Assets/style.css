@@ -2,22 +2,24 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-color:#ffffff;
+  color:#ffffff;
+  background-color:#1b1b1b;
 }
 
-textarea{
+.textarea{
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  font-weight: bolder;
 }
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: rgb(224, 172, 39);
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -34,27 +36,27 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid rgb(224, 172, 39);
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #1b1b1b;
+  color:  rgb(224, 172, 39);
   border-top: 1px dashed #000000;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color:rgb(124, 122, 122);
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #a54b46;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #688668;
   color: white;
 }
 
@@ -62,11 +64,19 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+  background-color: rgb(224, 172, 39);
+  color: black;
+  size: 1in;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+#clear-button {
+  background-color: rgb(224, 172, 39);
+  float: left;
+  border-radius: 15px;
+  font-weight: 500;
 }
